@@ -16,9 +16,9 @@ SoftwareSerial mySerial(RX, TX, false, 256);
 SerialCommand sCmd(mySerial);               // Khai báo biến sử dụng thư viện Serial Command
  
 SocketIOClient client;
-const char* ssid = "13C";                  //Tên mạng Wifi mà Socket server của bạn đang kết nối
+const char* ssid = "IOT";                  //Tên mạng Wifi mà Socket server của bạn đang kết nối
 const char* password = "tungthienanh";        //Pass mạng wifi
-char host[] = "phamthem.herokuapp.com";     //Địa chỉ IP dịch vụ 
+char host[] = "thientungspk.herokuapp.com";     //Địa chỉ IP dịch vụ 
 int port = 80;                              //Cổng dịch vụ socket server do chúng ta tạo
 char namespace_esp8266[] = "esp8266";       //Thêm Arduino!
  
