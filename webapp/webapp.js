@@ -47,6 +47,11 @@ angular.module('IoT', [
 	$scope.trangthairelay2 = "Chưa kết nối";
 	$scope.trangthairelay3 = "Chưa kết nối";
 	$scope.trangthairelay4 = "Chưa kết nối";
+	$scope.trangthairelay5 = "Chưa kết nối";
+	$scope.trangthairelay6 = "Chưa kết nối";
+	$scope.trangthairelay7 = "Chưa kết nối";
+	$scope.trangthairelay8 = "Chưa kết nối";
+	
 	$scope.trangthai4relay = "Chưa kết nối";
 	
 	
@@ -88,6 +93,45 @@ angular.module('IoT', [
 		mySocket.emit("NRL4")		//gởi chuỗi về arduino
 		}
 	///////////////////////////////////////////////////////////////
+
+//khu 2X -- gởi json về cho index.js đển chuyển về cho arduino
+	//Cách gửi tham số 1: dùng biến toàn cục! $scope.<tên biến> là biến toàn cục
+	$scope.dongrelay5 = function() {
+		console.log("ham dongrelay5 duoc thuc thi")
+		mySocket.emit("DRL5")		//gởi chuỗi về arduino
+		}
+	$scope.ngatrelay5 = function() {
+		console.log("ham ngatrelay5 duoc thuc thi")
+		mySocket.emit("NRL5")		//gởi chuỗi về arduino
+		}
+	/////////////////////////////////////////////////////////////
+	$scope.dongrelay6 = function() {
+		console.log("ham dongrelay6 duoc thuc thi")
+		mySocket.emit("DRL6")		//gởi chuỗi về arduino
+		}
+	$scope.ngatrelay6 = function() {
+		console.log("ham ngatrelay6 duoc thuc thi")
+		mySocket.emit("NRL6")		//gởi chuỗi về arduino
+		}
+	/////////////////////////////////////////////////////////////
+	$scope.dongrelay7 = function() {
+		console.log("ham dongrelay7 duoc thuc thi")
+		mySocket.emit("DRL7")		//gởi chuỗi về arduino
+		}
+	$scope.ngatrelay7 = function() {
+		console.log("ham ngatrelay7 duoc thuc thi")
+		mySocket.emit("NRL7")		//gởi chuỗi về arduino
+		}
+	//////////////////////////////////////////////////////////////
+	$scope.dongrelay8 = function() {
+		console.log("ham dongrelay8 duoc thuc thi")
+		mySocket.emit("DRL8")		//gởi chuỗi về arduino
+		}
+	$scope.ngatrelay8 = function() {
+		console.log("ham ngatrelay8 duoc thuc thi")
+		mySocket.emit("NRL8")		//gởi chuỗi về arduino
+		}
+	///////////////////////////////////////////////////////////////
 	$scope.dong4relay = function() {
 		console.log("ham dong4relay duoc thuc thi")
 		mySocket.emit("DTC")		//gởi chuỗi về arduino
@@ -96,6 +140,8 @@ angular.module('IoT', [
 		console.log("ham ngat4relay duoc thuc thi")
 		mySocket.emit("NTC")		//gởi chuỗi về arduino
 		}
+	
+	
 	//////////////////////////////////////////////////////////////
 	$scope.cncb = function() {
 		console.log("ham cncb duoc thuc thi")
@@ -121,6 +167,10 @@ angular.module('IoT', [
 		$scope.trangthairelay2 = (json.tt_relay2 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
 		$scope.trangthairelay3 = (json.tt_relay3 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
 		$scope.trangthairelay4 = (json.tt_relay4 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
+		$scope.trangthairelay5 = (json.tt_relay5 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
+		$scope.trangthairelay6 = (json.tt_relay6 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
+		$scope.trangthairelay7 = (json.tt_relay7 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
+		$scope.trangthairelay8 = (json.tt_relay8 == 1) ? "Thiết bị này đã BẬT" : "Thiết bị này đã TẮT"
 		$scope.trangthai4relay = (json.tt_tatca == 1) ? "Hãy kiểm các thiết bị có được BẬT chưa !" : "Hãy kiểm các thiết bị có được TẮT chưa !"
 		})
 	
