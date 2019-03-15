@@ -33,11 +33,10 @@ tr:nth-child(even) {background-color: #32efec;}
          <button class="w3-bar-item w3-button w3-center w3-large w3-text-white"style="text-shadow:1px 1px 0 #444"
         onclick="openCity('Home')"> <b>HOME</b></button>
            <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-        onclick="openCity('thanhvien')"><b>ABOUT US</b></button>
+        onclick="openCity('Aboutus')"><b>ABOUT US</b></button>
         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-        onclick="openCity('Project')"><b>HMI SYSTEMS</b></button>
-         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-        onclick="openCity('Contact')"><b>DATABASE</b></button>
+        onclick="openCity('HMI')"><b>HMI SYSTEMS</b></button>
+
         </div> 
    </div>
         <!-- #########################cục giới thiệu -->
@@ -72,51 +71,16 @@ tr:nth-child(even) {background-color: #32efec;}
        
            
        
-        <!-- #########################database -->
+        <!-- #########################HMI -->
 
-         <div id="Contact" class="w3-container city"  style="display:none">
-        <div class="w3-row  w3-padding-64">
-        <div class="w3-quarter w3-center w3-container">
-         <img class="w3-circle" src="Photo/dien1.jpg" alt="Avatar" style="width:80%">
-         <p class="  w3-center w3-large w3-text-blue" style="text-shadow:1px 1px 0 #444""><b>KHOA ĐIỆN ĐIỆN TỬ HCMUTE</b> </p> 
-        </div>
-        <div class="w3-twothird w3-round w3-gray w3-container ">
-        <h2 class="  w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444""><b>HỆ THỐNG SẤY CÀ PHÊ TỰ ĐỘNG</b> </h2> 
-        </div>
-        </div>
-
-       <form id="form1" runat="server">     
-         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-        </asp:ToolkitScriptManager>
-
-        <div class=" w3-border w3-third w3-container w3-padding-16 w3-white ">           
-        <h3 class=" w3-center w3-xxxlarge w3-text-black" style="text-shadow:1px 1px 0 #444" >DỮ LIỆU CẢM BIẾN</h3>
-        <asp:Literal ID= "Literal1_hienthigiatricambien" runat="server"></asp:Literal>
-        </div> 
-         <div class=" w3-center w3-container w3-twothird w3-padding-32 w3-white">    
-        <div>
-
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-             <ContentTemplate>
-                <asp:TextBox   placeholder="SensorID"  ID="tbxSensorID" runat="server"></asp:TextBox>
-                <asp:TextBox placeholder="Start Time"  ID="tbxStartTime" runat="server"></asp:TextBox>
-                <asp:TextBox  placeholder="End Time"   ID="tbxEndTime" runat="server"></asp:TextBox>
-                <asp:Button class="w3-center  w3-text-blue" style="text-shadow:1px 1px 0 #444" ID="btnXem" runat="server" 
-                Text= "Find" OnClick=" btnXem_Click" />
-                <asp:Literal ID="Literal2" runat="server"></asp:Literal>
-          </ContentTemplate>
-        </asp:UpdatePanel>
-       </div>
-       </div>
-       </div>
    
 
 
     <div class=" w3-container w3-padding-16">
  
-       <div id="Project" class="w3-container city"  style="display:none">
+       <div id="HMI" class="w3-container city"  style="display:none">
             
-    <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>HMI SYSTEM</b></h1>
+    <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>HMI</b></h1>
     <hr style="width:50px;border:5px solid white" class="w3-round">
    
     <form action="/action_page.php" target="_blank">
@@ -130,10 +94,11 @@ tr:nth-child(even) {background-color: #32efec;}
   </div>
         </div>
 
+            <!-- #########################HMI cục about us -->
 
     <div class=" w3-container w3-padding-16">
  
-       <div id="thanhvien" class="w3-container city"  style="display:none"> 
+       <div id="Aboutus" class="w3-container city"  style="display:none"> 
             
             <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>THÀNH VIÊN NHÓM</b></h1> 
             <hr style="width:50px;border:5px solid white" class="w3-round">
