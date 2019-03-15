@@ -1,42 +1,9 @@
-<html xmlns="http://www.w3.org/1999/xhtml" & ng-app="IoT">
-    
-    <head>
-    <meta charset="utf-8">
-    <title>NHÀ VƯỜN THÔNG MINH</title>
-    <!-- Only required for desktop -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css" />
-    <!-- Always required -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-base.min.css" />
-    <!-- Only required for desktop -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-desktop.min.css" />
-    <script src="/angular.min.js"></script>
-    <script src="/angular-route.min.js"></script>
-    <script src="/dist/js/mobile-angular-ui.min.js"></script>
-    <script src="/dist/socket.io.min.js"></script>
-    <script src="/socket.min.js"></script>
-    <script src="/webapp.js"></script>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-    <title></title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+    <%@ register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+    <!DOCTYPE html>
 
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #32efec;
-        }
-    </style>
-
-</head>
-    
-    
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title> 
 <style>
@@ -74,10 +41,7 @@ tr:nth-child(even) {background-color: #32efec;}
         </div> 
    </div>
         <!-- #########################cục giới thiệu -->
-        <div class="w3-container  w3-margin">
-            <div id="Home" class="w3-container city">
-               
-                           <div class="scrollable">
+                   <div class="scrollable">
                 <div class="scrollable-content">
                     <div class="list-group text-center">
 
@@ -232,9 +196,6 @@ tr:nth-child(even) {background-color: #32efec;}
                 </div>
                 <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
             </div>
-        </div> 
-                
-            </div>           
         </div>
        
            
@@ -332,6 +293,42 @@ tr:nth-child(even) {background-color: #32efec;}
     <footer class="w3-center w3-padding-16 w3-black w3-padding-16">
   <p>Powered by <a href="https://www.facebook.com/breakingbadman" title="W3.CSS" target="_blank" class="w3-hover-text-green">UK TEAM</a></p> 
 </footer>
+
+
+
+
+   
+   
+    
+    <script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+
+        }
+
+</script>
+
+<script>
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
 </body>
 </html>
 
