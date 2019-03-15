@@ -1,232 +1,208 @@
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<html ng-app="IoT">
+    <%@ register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+    <!DOCTYPE html>
 
-<head>
-    <meta charset="utf-8">
-    <title>NHÀ VƯỜN THÔNG MINH</title>
-    <!-- Only required for desktop -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css" />
-    <!-- Always required -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-base.min.css" />
-    <!-- Only required for desktop -->
-    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-desktop.min.css" />
-    <script src="/angular.min.js"></script>
-    <script src="/angular-route.min.js"></script>
-    <script src="/dist/js/mobile-angular-ui.min.js"></script>
-    <script src="/dist/socket.io.min.js"></script>
-    <script src="/socket.min.js"></script>
-    <script src="/webapp.js"></script>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title> 
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-    <title></title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+th, td {
+    text-align: left;
+    padding: 8px;
+}
 
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #32efec;
-        }
-    </style>
-
+tr:nth-child(even) {background-color: #32efec;}
+</style>
 </head>
-
-<title>W3.CSS</title>
+     <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    		<%--
-<link rel="stylesheet" href="/Theme/w3.css">--%>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<%--
-<div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar "></div>--%>
+<link rel="stylesheet"  href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <%--<link rel="stylesheet" href="/Theme/w3.css">--%>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<%--<div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar "></div>--%>
 
-
-
-
-
-
-<body ng-controller="Home">
-    <!-- #########################cục tạo thẻ-->
-    <div class="w3-top">
-        <div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar ">
-            <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-                    onclick="openCity('Home')">
-                <b>HOME</b>
-            </button>
-            <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-                    onclick="openCity('Thanhvien')">
-                <b>ABOUT US</b>
-            </button>
-            <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-                    onclick="openCity('Project')">
-                <b>PROJECT</b>
-            </button>
-        </div>
-    </div>
-    <!-- #########################cục home -->
-
-            <div class="scrollable">
-                <div class="scrollable-content">
-                    <div class="list-group text-center">
-
-                        <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-                        <!-- #########################cục giới thiệu tên -->
-                        <div class="list-group-item list-group-item-warning">
-                            <h1><b><span style="color: red">NHÀ VƯỜN</span><span style="color: green"> THÔNG MINH</span></b></h1>
-                            <img src="https://acis.cdn.vccloud.vn/wp-content/uploads/2018/01/giai-phap-nha-thong-minh-3.jpg" width="450px" height="180px"><img src="http://fet.iuh.edu.vn/images/2017/02/argi.jpg" width="450px" height="180px">
-                        </div>
-                        <!-- #########################cục giới thiệu thành viên -->                        
-                        <div class=" w3-container w3-padding-16">
-
-                            <div class="w3-container city" style="display:none">
-
-                                <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>THÀNH VIÊN NHÓM</b></h1>
-                                <hr style="width:50px;border:5px solid white" class="w3-round">
-
-                                <form action="/action_page.php" target="_blank"></form>
-
-
-                                <div class="w3-row-padding ">
-                                    <div class=" w3-col l3 m6 w3-margin-bottom">
-                                        <img src="Photo/thien.jpg" alt="Thien" style="width:100%">
-                                        <h3 class="w3-center">Thien Nguyen</h3>
-
-                                        <a href="https://www.facebook.com/thiennguyen.automation" class="w3-button w3-light-grey w3-block">Contact</a>
-                                    </div>
-                                    <div class="w3-col l3 m6 w3-margin-bottom">
-                                        <img src="Photo/thao.jpg" alt="Thao" style="width:100%">
-                                        <h3 class="w3-center">Dao</h3>
-                                        <a href="https://www.facebook.com/daoduytung9a2" class="w3-button w3-light-grey w3-block">Contact</a>
-                                    </div>
-                                    <div class="w3-col l3 m6 w3-margin-bottom">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-                        <!-- ####################Cục nhiệt độ độ ẩm -->
-
-                        <div class="list-group-item list-group-item-home">
-                            <div>
-                                <h3 class="home-heading"><span style="color: purple">NHIỆT ĐỘ</span><span style="color: orange"> và</span><span style="color: purple"> ĐỘ ẨM</span> <span style="color: orange">TẠI VƯỜN</span></h3>
-                                <h4 class="home-heading">Nhiệt độ lúc này là:</h4>
-                                <span style="color: brown"><b>{{nhietdo}}</b>__(độ C)</span>
-                                <h4 class="home-heading">Độ ẩm lúc này là:</h4>
-                                <span style="color: brown"><b>{{doam}}</b>__(%)</span>
-                            </div>
-                        </div>
-                        <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-                        <!-- #####################Cục cập nhập giá trị cảm biến -->
-                        <div class="list-group-item list-group-item-warning">
-                            <div>
-                                <h3 class="home-heading"><span style="color: blue">CẬP NHẬT HỆ THỐNG</span></h3>
-                                <button class="btn btn-warning" ng-click="cncb()">Cập nhật các cảm biến</button><button class="btn btn-dark" ng-click="cntb()">Cập nhật trạng thái on/off</button>
-                            </div>
-                        </div>
-                        <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-                        <div class="list-group-item list-group-item-warning">
-                            <!-- ####################Cục thay đổi trạng thái relay 1 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 1</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay1()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay1()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay1}}</span></b>
-
-                            <!--####################### Cục thay đổi trạng thái relay 2 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 2</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay2()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay2()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay2}}</span></b>
-
-                            <!-- ####################Cục thay đổi trạng thái relay 3 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 3</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay3()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay3()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay3}}</span></b>
-
-                            <!--#####################Cục thay đổi trạng thái relay 4 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 4</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay4()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay4()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay4}}</span></b>
-
-
-
-                            <!-- ####################Cục thay đổi trạng thái relay 5 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 5</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay5()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay5()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay5}}</span></b>
-
-                            <!--#####################Cục thay đổi trạng thái relay 6 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 6</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay6()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay6()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay6}}</span></b>
-
-                            <!-- ####################Cục thay đổi trạng thái relay 7 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 7</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay7()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay7()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay7}}</span></b>
-
-                            <!--#####################Cục thay đổi trạng thái relay 8 -->
-                            <div>
-                                <h3 class="home-heading"><span style="color: brown">ĐIỀU KHIỂN THIẾT BỊ 8</span></h3>
-                                <img src="http://www.clker.com/cliparts/4/4/5/3/1308930172593232192500px-crystal_clear_app_ktip.svg-hi.png" width="50px" height="50px">
-                                <button class="btn btn-success" ng-click="dongrelay8()">Bật</button><button class="btn btn-danger" ng-click="ngatrelay8()">Tắt</button>
-                            </div>
-                            <b><span style="color: green">{{trangthairelay8}}</span></b>
-
-
-                            <!--#####################Cục thay đổi trạng thái 4 relay-->
-                            <div>
-                                <h3 class="home-heading"><span style="color: navy">ĐIỀU KHIỂN ĐỒNG THỜI 4 THIẾT BỊ</span></h3>
-                                <button class="btn btn-success" ng-click="dong4relay()">Bật tất cả thiết bị</button><button class="btn btn-danger" ng-click="ngat4relay()">Tắt tất cả thiết bị</button>
-                            </div>
-                            <b><span style="color: green">{{trangthai4relay}}</span></b>
-                        </div>
-                        <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+<body>
+   <div class="w3-top"> 
+       <div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar ">
+         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white"style="text-shadow:1px 1px 0 #444"
+        onclick="openCity('Home')"> <b>HOME</b></button>
+           <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
+        onclick="openCity('thanhvien')"><b>ABOUT US</b></button>
+        <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
+        onclick="openCity('Project')"><b>HMI SYSTEMS</b></button>
+         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
+        onclick="openCity('Contact')"><b>DATABASE</b></button>
+        </div> 
+   </div>
+        <!-- #########################cục giới thiệu -->
+        <div class="w3-container  w3-margin">
+            <div id="Home" class="w3-container city">
+                <div class="w3-container w3-padding-64 ">             
+                    <div class="  w3-margin w3-quarter ">
+                        <img src="Photo/spkt.png" alt="Avatar" style="width:40%">
                     </div>
-                    <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-                    <!-- #################### giới thiệu-->
-                    <div class="list-group-item list-group-item-info">
-                        <html>
-
-                        <b><h3><span style="color: black">TÙNG THIỆN SPK</span></h3></b>
-                        <h4><span style="color: black">Liên hệ: </span><span style="color: olive">TÙNG THIỆN</span></h4>
-                        <h4><span style="color: black">Email:	</span><span style="color: olive">daoduytung@gmail.com</span></h4>
-                        <h4><span style="color: black">Student: </span><span style="color: olive">dinhthiennguyen1279@gmail.com</span></h4>
-                        <h4><a href="https://www.facebook.com/thiennguyen.automation">Ghé thăm facebook tại đây</a></h4>
-                        <b><h3><span style="color: red">___________________</span></h3></b>
-                        <h4><span style="color:olive">Sinh viên tại Đại Học Sư Phạm Kỹ Thuật TP.HCM</span></h4>
-                        <h4><span style="color:olive">Chuyên ngành: Công nghệ Kỹ thuật ĐIỀU KHIỂN và TỰ ĐỘNG HÓA</span></h4>
-                        <h4><span style="color:olive">HELLO</span></h4>
-                    </html>
+                    <div class="w3-twothird  ">
+                        <h1 class="w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444 "><b>HT THU THẬP DỮ LIỆU, ĐIỀU KHIỂN VÀ GIÁM SÁT (SCADA)</b> </h1>
+                        <h1 class="w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444 "><b>GVHD: TS Nguyễn Văn Thái</b> </h1>
+                    </div>
+                </div>      
+            <div class=" w3-container w3-padding-16">       
+                <div class="w3-display-container  w3-content w3-wide" style="max-width:1500px;" id="home">
+                        <img class="w3-image w3-round" src="Photo/anh.jpg" alt="Architecture" width="1500" height="800">  
+                        <div class="w3-display-topleft w3-margin-top w3-center">
+                        <h1 class="   w3-xxlarge w3-text-white w3-xlarge w3-serif"><span class=" w3-padding w3-opacity-min"><b>" "</b></span>
+                        </h1>
+                        </div>
+                        <div class="w3-display-middle w3-margin-top w3-center">  
+                        </div>
                 </div>
-                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
-            </div>
+             </div>
+                        <div class="w3-row-padding ">
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                            </div>
+                        </div>
+                 </div>           
         </div>
+       
+           
+       
+        <!-- #########################database -->
+
+         <div id="Contact" class="w3-container city"  style="display:none">
+        <div class="w3-row  w3-padding-64">
+        <div class="w3-quarter w3-center w3-container">
+         <img class="w3-circle" src="Photo/dien1.jpg" alt="Avatar" style="width:80%">
+         <p class="  w3-center w3-large w3-text-blue" style="text-shadow:1px 1px 0 #444""><b>KHOA ĐIỆN ĐIỆN TỬ HCMUTE</b> </p> 
+        </div>
+        <div class="w3-twothird w3-round w3-gray w3-container ">
+        <h2 class="  w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444""><b>HỆ THỐNG SẤY CÀ PHÊ TỰ ĐỘNG</b> </h2> 
+        </div>
+        </div>
+
+       <form id="form1" runat="server">     
+         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+
+        <div class=" w3-border w3-third w3-container w3-padding-16 w3-white ">           
+        <h3 class=" w3-center w3-xxxlarge w3-text-black" style="text-shadow:1px 1px 0 #444" >DỮ LIỆU CẢM BIẾN</h3>
+        <asp:Literal ID= "Literal1_hienthigiatricambien" runat="server"></asp:Literal>
+        </div> 
+         <div class=" w3-center w3-container w3-twothird w3-padding-32 w3-white">    
+        <div>
+
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+             <ContentTemplate>
+                <asp:TextBox   placeholder="SensorID"  ID="tbxSensorID" runat="server"></asp:TextBox>
+                <asp:TextBox placeholder="Start Time"  ID="tbxStartTime" runat="server"></asp:TextBox>
+                <asp:TextBox  placeholder="End Time"   ID="tbxEndTime" runat="server"></asp:TextBox>
+                <asp:Button class="w3-center  w3-text-blue" style="text-shadow:1px 1px 0 #444" ID="btnXem" runat="server" 
+                Text= "Find" OnClick=" btnXem_Click" />
+                <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+          </ContentTemplate>
+        </asp:UpdatePanel>
+       </div>
+       </div>
+       </div>
+   
+
+
+    <div class=" w3-container w3-padding-16">
+ 
+       <div id="Project" class="w3-container city"  style="display:none">
+            
+    <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>HMI SYSTEM</b></h1>
+    <hr style="width:50px;border:5px solid white" class="w3-round">
+   
+    <form action="/action_page.php" target="_blank">
+      
+
+        <div class="w3-display-container  w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image w3-round" src="Photo/mapp.jpg" alt="Architecture" width="1500" height="800"> 
+
+      
+    </form>  
+  </div>
+        </div>
+
+
+    <div class=" w3-container w3-padding-16">
+ 
+       <div id="thanhvien" class="w3-container city"  style="display:none"> 
+            
+            <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>THÀNH VIÊN NHÓM</b></h1> 
+            <hr style="width:50px;border:5px solid white" class="w3-round">
+   
+            <form action="/action_page.php" target="_blank"></form> 
+      
+
+            <div class="w3-row-padding ">
+                <div class=" w3-col l3 m6 w3-margin-bottom">
+                    <img  src="Photo/thien.jpg"  alt="Thien" style="width:100%">
+                    <h3 class="w3-center">Thien Nguyen</h3>
+    
+                    <a href="https://www.facebook.com/breakingbadman" class="w3-button w3-light-grey w3-block">Contact</a>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img src="Photo/thao.jpg" alt="Thao" style="width:100%">
+                    <h3 class="w3-center">To Thao</h3>
+                    <a href="https://www.facebook.com/thuanthao.to" class="w3-button w3-light-grey w3-block">Contact</a>
+                </div>
+                 <div class="w3-col l3 m6 w3-margin-bottom">
+                 </div>
+            </div>
+         </div> 
+         
+  </div>
+
+
+
+    <footer class="w3-center w3-padding-16 w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.facebook.com/breakingbadman" title="W3.CSS" target="_blank" class="w3-hover-text-green">UK TEAM</a></p> 
+</footer>
+
+
+
+
+   
+   
+    
+    <script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+
+        }
+
+</script>
+
+<script>
+    var myIndex = 0;
+    carousel();
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 </body>
 </html>
+
+
+   
