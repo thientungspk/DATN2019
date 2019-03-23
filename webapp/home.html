@@ -1,14 +1,12 @@
-    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
     <%@ register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
     <!DOCTYPE html>
 
-<html ng-app="IoT" xmlns="http://www.w3.org/1999/xhtml">
-
-<head runat="server">
-
-
-       <meta charset="utf-8">
+<html xmlns="http://www.w3.org/1999/xhtml" & ng-app="IoT">
+    
+    <head>
+    <meta charset="utf-8">
     <title>NHÀ VƯỜN THÔNG MINH</title>
     <!-- Only required for desktop -->
     <link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css" />
@@ -24,30 +22,44 @@
     <script src="/webapp.js"></script>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
+    <title></title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #32efec;
+        }
+    </style>
+
+</head>
+    
+    
+<head runat="server">
     <title></title> 
 <style>
 table {
     border-collapse: collapse;
     width: 100%;
 }
-
 th, td {
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even) {background-color: #32efec;}
-
-
-
 </style>
 </head>
      <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"  href="https://www.w3schools.com/w3css/4/w3.css">
-   <!-- <%--<link rel="stylesheet" href="/Theme/w3.css">--%>-->
+<link rel="stylesheet"  href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <%--<link rel="stylesheet" href="/Theme/w3.css">--%>
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!--<%--<div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar "></div>--%>-->
+<%--<div class="w3-container w3-teal w3-padding w3-margin-topleft w3-bar "></div>--%>
 
 <body>
    <div class="w3-top"> 
@@ -55,53 +67,18 @@ tr:nth-child(even) {background-color: #32efec;}
          <button class="w3-bar-item w3-button w3-center w3-large w3-text-white"style="text-shadow:1px 1px 0 #444"
         onclick="openCity('Home')"> <b>HOME</b></button>
            <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-        onclick="openCity('Data')"><b>DATA</b></button>
+        onclick="openCity('thanhvien')"><b>ABOUT US</b></button>
         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
-        onclick="openCity('Aboutus')"><b>ABOUT US</b></button>
-
+        onclick="openCity('Project')"><b>HMI SYSTEMS</b></button>
+         <button class="w3-bar-item w3-button w3-center w3-large w3-text-white" style="text-shadow:1px 1px 0 #444"
+        onclick="openCity('Contact')"><b>DATABASE</b></button>
         </div> 
    </div>
         <!-- #########################cục giới thiệu -->
         <div class="w3-container  w3-margin">
             <div id="Home" class="w3-container city">
-                <div class="w3-container w3-padding-64 ">             
-                    <div class="  w3-margin w3-quarter ">
-                        <img src="Photo/spkt.png" alt="Avatar" style="width:40%">
-                    </div>
-                    <div class="w3-twothird  ">
-                        <h1 class="w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444 "><b>ĐỒ ÁN TỐT NGHIỆP</b> </h1>
-                        <h1 class="w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444 "><b>GVHD: TS Nguyễn Văn Thái</b> </h1>
-                    </div>
-                </div>      
-            <div class=" w3-container w3-padding-16">       
-                <div class="w3-display-container  w3-content w3-wide" style="max-width:1500px;" id="home">
-                        <img class="w3-image w3-round" src="Photo/anh.jpg" alt="Architecture" width="1500" height="800">  
-                        <div class="w3-display-topleft w3-margin-top w3-center">
-                        <h1 class="   w3-xxlarge w3-text-white w3-xlarge w3-serif"><span class=" w3-padding w3-opacity-min"><b>" "</b></span>
-                        </h1>
-                        </div>
-                        <div class="w3-display-middle w3-margin-top w3-center">  
-                        </div>
-                </div>
-             </div>
-                        <div class="w3-row-padding ">
-                            <div class="w3-col l3 m6 w3-margin-bottom">
-                            </div>
-                        </div>
-                 </div>           
-        </div>
-       
-           
-       
-        <!-- #########################HMI -->
-
-   
-
-
-<div class=" w3-container w3-padding-16">
-  <div id="HMI" class="w3-container city"  style="display:none">
-          
-         <div class="scrollable">
+               
+                           <div class="scrollable">
                 <div class="scrollable-content">
                     <div class="list-group text-center">
 
@@ -256,15 +233,75 @@ tr:nth-child(even) {background-color: #32efec;}
                 </div>
                 <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
             </div>
+        </div> 
+                
+            </div>           
         </div>
-  </div>
-</div>
+       
+           
+       
+        <!-- #########################database -->
 
-            <!-- #########################HMI cục about us -->
+         <div id="Contact" class="w3-container city"  style="display:none">
+        <div class="w3-row  w3-padding-64">
+        <div class="w3-quarter w3-center w3-container">
+         <img class="w3-circle" src="Photo/dien1.jpg" alt="Avatar" style="width:80%">
+         <p class="  w3-center w3-large w3-text-blue" style="text-shadow:1px 1px 0 #444""><b>KHOA ĐIỆN ĐIỆN TỬ HCMUTE</b> </p> 
+        </div>
+        <div class="w3-twothird w3-round w3-gray w3-container ">
+        <h2 class="  w3-center w3-xxxlarge w3-text-red" style="text-shadow:1px 1px 0 #444""><b>HỆ THỐNG SẤY CÀ PHÊ TỰ ĐỘNG</b> </h2> 
+        </div>
+        </div>
+
+       <form id="form1" runat="server">     
+         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+        </asp:ToolkitScriptManager>
+
+        <div class=" w3-border w3-third w3-container w3-padding-16 w3-white ">           
+        <h3 class=" w3-center w3-xxxlarge w3-text-black" style="text-shadow:1px 1px 0 #444" >DỮ LIỆU CẢM BIẾN</h3>
+        <asp:Literal ID= "Literal1_hienthigiatricambien" runat="server"></asp:Literal>
+        </div> 
+         <div class=" w3-center w3-container w3-twothird w3-padding-32 w3-white">    
+        <div>
+
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+             <ContentTemplate>
+                <asp:TextBox   placeholder="SensorID"  ID="tbxSensorID" runat="server"></asp:TextBox>
+                <asp:TextBox placeholder="Start Time"  ID="tbxStartTime" runat="server"></asp:TextBox>
+                <asp:TextBox  placeholder="End Time"   ID="tbxEndTime" runat="server"></asp:TextBox>
+                <asp:Button class="w3-center  w3-text-blue" style="text-shadow:1px 1px 0 #444" ID="btnXem" runat="server" 
+                Text= "Find" OnClick=" btnXem_Click" />
+                <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+          </ContentTemplate>
+        </asp:UpdatePanel>
+       </div>
+       </div>
+       </div>
+   
+
 
     <div class=" w3-container w3-padding-16">
  
-       <div id="Aboutus" class="w3-container city"  style="display:none"> 
+       <div id="Project" class="w3-container city"  style="display:none">
+            
+    <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>HMI SYSTEM</b></h1>
+    <hr style="width:50px;border:5px solid white" class="w3-round">
+   
+    <form action="/action_page.php" target="_blank">
+      
+
+        <div class="w3-display-container  w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image w3-round" src="Photo/mapp.jpg" alt="Architecture" width="1500" height="800"> 
+
+      
+    </form>  
+  </div>
+        </div>
+
+
+    <div class=" w3-container w3-padding-16">
+ 
+       <div id="thanhvien" class="w3-container city"  style="display:none"> 
             
             <h1 class=" w3-center w3-xxxlarge w3-text-red"><b>THÀNH VIÊN NHÓM</b></h1> 
             <hr style="width:50px;border:5px solid white" class="w3-round">
@@ -311,9 +348,7 @@ function openCity(cityName) {
        x[i].style.display = "none";  
     }
     document.getElementById(cityName).style.display = "block";  
-
         }
-
 </script>
 
 <script>
@@ -334,6 +369,3 @@ function openCity(cityName) {
 
 </body>
 </html>
-
-
-   
